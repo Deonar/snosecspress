@@ -1,0 +1,19 @@
+@import "vars";
+@import "fonts";
+@import "custom";
+@import "node_modules/bootstrap/scss/bootstrap-reboot";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/forms";
+@import "typography";
+
+
+@import "base";
+@import "components/buttons";
+@import "components/elements";
+@import "components/forms-elements";
+
+@import "blocks/header";
+@import "blocks/footer";
+
+//Pages
+@import "pages/404";

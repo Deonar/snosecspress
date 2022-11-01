@@ -1,4 +1,4 @@
-<div class="main-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/src/img/main-bg.jpg')">
+<div class="main-block" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/img/main-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-6">

@@ -88,7 +88,7 @@ a{
   }
 }
 
-
+// btn
 .btn {
   background: $red;
   color: white !important;
@@ -96,6 +96,38 @@ a{
   border-radius: 5px;
   font-size: 18px;
 }
+// block-title
+.block-title {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  color: $red;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  h3 {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 40px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 120px;
+      height: 3px;
+      background: $red;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+    &::before {
+      left: -90%;
+    }
+    &::after {
+      right: -90%;
+    }
+  }
+}
+
 
 .italic{
   font-style: italic;

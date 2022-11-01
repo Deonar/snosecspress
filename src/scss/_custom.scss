@@ -4,19 +4,19 @@ $rem: 16;
 $grid-columns: 8;
 
 
-@function calc-rem($px) {
+// @function calc-rem($px) {
 	
-	$result: $px / $rem;
+// 	$result: $px / $rem;
 	
-	@return $result + rem;
-}
+// 	@return $result + rem;
+// }
 
-@function calc-lh($fs, $lh) {
+// @function calc-lh($fs, $lh) {
 	
-	$result: $lh / $fs;
+// 	$result: $lh / $fs;
 	
-	@return $result;
-}
+// 	@return $result;
+// }
 
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (

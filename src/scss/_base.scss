@@ -15,7 +15,7 @@ body {
   position: relative;
   font-family: $base-font;
   font-style: normal;
-  font-size: calc-rem(16);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   color: $black;
@@ -43,7 +43,7 @@ button{
 input, textarea {
   font-family: $base-font;
   outline: none;
-  font-size: calc-rem(20);
+  font-size: 20px;
   line-height: calc-lh(20, 32);
   cursor: pointer;
 }
@@ -87,6 +87,16 @@ a{
     width: 2px;
   }
 }
+
+
+.btn {
+  background: $red;
+  color: white !important;
+  padding: 16px 40px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
 .italic{
   font-style: italic;
 }

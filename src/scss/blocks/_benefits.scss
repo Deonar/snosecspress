@@ -1,0 +1,17 @@
+.benefits {
+   &__item {
+      background: #757A7E;
+      position: relative;
+      display: flex;
+      padding: 0 20px;
+      overflow: hidden;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+         font-size: 18px;
+         font-weight: 600;
+         color: white;
+         min-width: 200px;
+      }
+   }
+}

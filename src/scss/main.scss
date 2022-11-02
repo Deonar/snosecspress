@@ -18,6 +18,11 @@
 @import "blocks/about-us";
 @import "blocks/service";
 @import "blocks/benefits";
+@import "blocks/portfolio";
 
 //Pages
 @import "pages/404";
+
+.container {
+   max-width: 1550px !important;
+}

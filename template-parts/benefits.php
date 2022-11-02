@@ -1,4 +1,4 @@
-<!-- <div class="benefits">
+<div class="benefits">
    <div class="container">
       <div class="block-title"><h3>Наші переваги</h3></div>
       <div class="benefits__wrapper row">
@@ -12,4 +12,4 @@
          <?php } ?>
       </div>
    </div>
-</div> -->
+</div>

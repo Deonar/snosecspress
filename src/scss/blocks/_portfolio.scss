@@ -13,10 +13,7 @@
       background: $red;
       border-radius: 50%;
       &::after {
-         content: '';
-         width: 6px;
-         height: 10px;
-         background: url('../img/portfolio/arrow.svg');
+         display: none;
       }
    }
    .swiper-button-prev {
@@ -27,10 +24,6 @@
    }
    .swiper-button-next {
       right: 20px;
-      &::after {
-         transform: rotate(180deg);
-         margin-left: 2px;
-      }
    }
    .swiper-pagination {
       bottom: -35px;

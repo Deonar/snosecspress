@@ -1,4 +1,4 @@
-<!-- <div class="portfolio">
+<div class="portfolio">
    <div class="container">
       <div class="block-title"><h3>Наші виконані замовлення</h3></div>
       <div class="portfolio__slider swiper">
@@ -32,4 +32,4 @@
    },
   });
   
-</script> -->
+</script>

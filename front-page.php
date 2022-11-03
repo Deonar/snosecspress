@@ -12,6 +12,8 @@ get_header(); ?>
 <?php get_template_part('template-parts/benefits'); ?>
 <?php get_template_part('template-parts/portfolio'); ?>
 <?php get_template_part('template-parts/call-block'); ?>
+<?php get_template_part('template-parts/price'); ?>
+<?php get_template_part('template-parts/stage'); ?>
 
 <?php
 get_footer(); ?>

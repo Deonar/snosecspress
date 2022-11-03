@@ -1,3 +1,32 @@
 .footer {
-   
+   background: $black;
+   text-align: center;
+   padding-bottom: 20px;
+   .nav {
+      a {
+         color: white;
+      }
+      &__logo {
+         color: white !important;
+      }
+      &__soc {
+         .item {
+            border-color: white;
+         }
+      }
+      .btn {
+         color: $black !important;
+         background: white;
+      }
+   }
+   svg {
+      path {
+         fill: white;
+      }
+   }
+   span {
+      color: #757A7E;
+      font-size: 14px;
+      font-weight: 500;
+   }
 }

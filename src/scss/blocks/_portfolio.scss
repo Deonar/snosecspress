@@ -5,39 +5,4 @@
          width: 100%;
       }
    }
-   .swiper-button-next, 
-   .swiper-button-prev {
-      top: 70%;
-      width: 40px;
-      height: 40px;
-      background: $red;
-      border-radius: 50%;
-      &::after {
-         display: none;
-      }
-   }
-   .swiper-button-prev {
-      left: 20px;
-      &::after {
-         margin-right: 2px;
-      }
-   }
-   .swiper-button-next {
-      right: 20px;
-   }
-   .swiper-pagination {
-      bottom: -35px;
-   }
-   .swiper-pagination-bullet {
-      background: none;
-      border: 1px solid #D9D9D9;
-      width: 10px;
-      height: 10px;
-      opacity: 1;
-      transition: 0.1s;
-   }
-   .swiper-pagination-bullet-active {
-      background: $red;
-      border: none;
-   }
 }

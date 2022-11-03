@@ -6,6 +6,14 @@
       overflow: hidden;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: 1022px) {
+         margin: 15px 0;
+      }
+      @media (max-width: 572px) {
+         &:nth-child(odd) {
+            flex-direction: row-reverse;
+         }
+      }
       h3 {
          font-size: 18px;
          font-weight: 400;

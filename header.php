@@ -26,36 +26,7 @@
 <header class="header">
 	<div class="container">
 		<div class="header__wrapper">
-			<div class="nav">
-				<a href="#" class="nav__logo">SnosEcspress</a>
-
-				<a class="location item" href="#">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/location.svg" alt="">
-					<div>
-						<p>Київ та область</p>
-						<p>Пн-Нд 10:00-20:00</p>
-					</div>
-				</a>
-				<a class="email item" href="#">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/email.svg" alt="">
-					<p>arturkozar49@gmail.com</p>
-				</a>
-				<div class="nav__soc">
-					<a href="#" class="item"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/f.svg" alt=""></a>
-					<a href="#" class="item"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/tg.svg" alt=""></a>
-					<a href="#" class="item"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/i.svg" alt=""></a>
-				</div>
-				<div class="nav__call">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/img/nav/call.svg" alt="">
-					<div>
-						<a href="#">+38 099 5278624</a>
-						<a href="#">+38 093 4641082</a>
-					</div>
-				</div>
-				<div class="nav__btn">
-					<a href="#" class="btn">Замовити Дзвінок</a>
-				</div>
-			</div>
+			<?php get_template_part('template-parts/nav'); ?>
 		</div>
 	</div>
 	<div class="menu">

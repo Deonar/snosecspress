@@ -14,22 +14,29 @@ jQuery(document).ready(function ($) {
   let tabBtn = document.querySelectorAll('.price__tab-btn');
   let tabItem = document.querySelectorAll('.price__tab-item');
   
+// Tabs
+const tabsPrice = function () {
+  let tabBtn = document.querySelectorAll(".price__tab-btn");
+  let tabItem = document.querySelectorAll(".price__tab-item");
+
   tabBtn.forEach(function (item) {
-    item.addEventListener('click', () => {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute('data-tab');
-        let currentTub = document.querySelector(tabId);
-  
-        tabBtn.forEach(function (item) {
-          item.classList.remove('active');
-        });
-  
-        tabItem.forEach(function (item) {
-          item.classList.remove('active');
-        });
-  
-        currentBtn.classList.add('active');
-        currentTub.classList.add('active');
+    item.addEventListener("click", () => {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTub = document.querySelector(tabId);
+
+      tabBtn.forEach(function (item) {
+        item.classList.remove("active");
       });
+
+      tabItem.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      currentBtn.classList.add("active");
+      currentTub.classList.add("active");
+    });
   });
+};
+tabsPrice();
 });

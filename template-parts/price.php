@@ -13,40 +13,30 @@
                tab 1 
             </div>
             <div class="price__tab-item tab-item" id="tab-2">
-            <?php for ($i = 1; $i <= 10; $i++) {  ?>
-               <div class="price__item row">
-                  <div class="col-lg-3">
-                     <p>Завантаження ГазеліЗавантаження ГазеліЗавантаження ГазеліЗавантаження ГазеліЗавантаження Газелі</p>
-                  </div>
-                  <div class="col-lg-5">
-                     <p>5 грн/мішок</p>
-                  </div>
-               </div>
-               <?php } ?> 
             </div>
             <div class="price__tab-item tab-item" id="tab-3">
-            <?php for ($i = 1; $i <= 10; $i++) {  ?>
-               <div class="price__item row">
-                  <div class="col-lg-3">
-                     <p>Газель</p>
-                  </div>
-                  <div class="col-lg-5">
-                     <p>5 грн/мішок</p>
-                  </div>
-               </div>
-               <?php } ?>  
+            <table class="price__table">
+                  <tbody>
+                  <?php for ($i = 1; $i <= 10; $i++) {  ?>
+                     <tr>
+                        <td>Газель</td>
+                        <td>900 грн (до 50 мішків)</td>
+                     </tr>
+                  <?php } ?>
+                  </tbody>
+               </table>
             </div>
             <div class="price__tab-item tab-item active" id="tab-4">
-               <?php for ($i = 1; $i <= 10; $i++) {  ?>
-               <div class="price__item row">
-                  <div class="col-lg-3">
-                     <p>КаМаз</p>
-                  </div>
-                  <div class="col-lg-5">
-                     <p>2200 грн (240-280 мішків)</p>
-                  </div>
-               </div>
-               <?php } ?>  
+               <table class="price__table">
+                  <tbody>
+                  <?php for ($i = 1; $i <= 10; $i++) {  ?>
+                     <tr>
+                        <td>КаМаз</td>
+                        <td>2200 грн</td>
+                     </tr>
+                  <?php } ?>
+                  </tbody>
+               </table>
             </div>
          </div>
       </div>

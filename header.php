@@ -32,15 +32,15 @@
 	<div class="menu">
 		<div class="container">
 			<ul>
-				<li><a href="#">Про компанію</a></li>
-				<li><a href="#">Послуги</a></li>
-				<li><a href="#">Переваги</a></li>
-				<li><a href="#">Наші роботи</a></li>
-				<li><a href="#">Ціни</a></li>
-				<li><a href="#">Етапи роботи</a></li>
-				<li><a href="#">Відгуки</a></li>
-				<li><a href="#">Часті запитання</a></li>
-				<li><a href="#">Контакти</a></li>
+				<li><a href="#" class="a-hover">Про компанію</a></li>
+				<li><a href="#" class="a-hover">Послуги</a></li>
+				<li><a href="#" class="a-hover">Переваги</a></li>
+				<li><a href="#" class="a-hover">Наші роботи</a></li>
+				<li><a href="#" class="a-hover">Ціни</a></li>
+				<li><a href="#" class="a-hover">Етапи роботи</a></li>
+				<li><a href="#" class="a-hover">Відгуки</a></li>
+				<li><a href="#" class="a-hover">Часті запитання</a></li>
+				<li><a href="#" class="a-hover">Контакти</a></li>
 			</ul>
 		</div>
 	</div>

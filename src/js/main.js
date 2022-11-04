@@ -1,4 +1,11 @@
 jQuery(document).ready(function ($) {
+
+  $('#header-burger').on('click', function (e) {
+    $(this).toggleClass('active');
+    $('.header__menu ').toggleClass('active');
+    $('body').toggleClass('overflow-h');
+  });
+
   // portfolio slider
   let portfolioSlider = new Swiper(".portfolio__slider", {
     navigation: {
@@ -12,10 +19,38 @@ jQuery(document).ready(function ($) {
       clickable: true,
     },
   });
+  // mob slider
+  let window_w = window.innerWidth;
+
+  if ( window_w < 811 ) {
+    portfolioSlider = new Swiper(".portfolio__slider", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: ".portfolio-slider-pagination",
+        clickable: true,
+      },
+    });
+  }
+  if ( window_w < 415 ) {
+    portfolioSlider = new Swiper(".portfolio__slider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".portfolio-slider-pagination",
+        clickable: true,
+      },
+    });
+  }
+
+
+
+
+
+
+  // tab
   let tabBtn = document.querySelectorAll('.price__tab-btn');
   let tabItem = document.querySelectorAll('.price__tab-item');
-  
-// Tabs
   const tabsPrice = function () {
     let tabBtn = document.querySelectorAll(".price__tab-btn");
     let tabItem = document.querySelectorAll(".price__tab-item");
@@ -41,7 +76,7 @@ jQuery(document).ready(function ($) {
   };
 tabsPrice();
 
-  // portfolio slider
+  // reviews slider
   let reviewsSlider = new Swiper(".reviews__slider", {
     navigation: {
       nextEl: ".reviews-slider-button-next",
@@ -54,6 +89,36 @@ tabsPrice();
       clickable: true,
     },
   });
+  // mob slider
+  if ( window_w < 811 ) {
+    reviewsSlider = new Swiper(".reviews__slider", {
+      navigation: {
+        nextEl: ".reviews-slider-button-next",
+        prevEl: ".reviews-slider-button-prev",
+      },
+      slidesPerView: 2,
+      spaceBetween: 40,
+      pagination: {
+        el: ".reviews-slider-pagination",
+        clickable: true,
+      },
+    });
+    }
+    if ( window_w < 415 ) {
+      reviewsSlider = new Swiper(".reviews__slider", {
+        navigation: {
+          nextEl: ".reviews-slider-button-next",
+          prevEl: ".reviews-slider-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 40,
+        pagination: {
+          el: ".reviews-slider-pagination",
+          clickable: true,
+        },
+      });
+      }
+    
   
     //Accordion 
     $(".accordion-tab-js").on("click", function() {

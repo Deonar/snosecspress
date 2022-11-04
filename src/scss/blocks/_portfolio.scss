@@ -5,4 +5,9 @@
          width: 100%;
       }
    }
+   @media (max-width: $ipad) {
+      .portfolio-slider-button-next, .portfolio-slider-button-prev {
+         display: none !important;
+      }
+   }
 }

@@ -9,9 +9,14 @@
       @media (max-width: 1022px) {
          margin: 15px 0;
       }
-      @media (max-width: 572px) {
-         &:nth-child(odd) {
-            flex-direction: row-reverse;
+      &-wrapper {
+         @media (max-width: $iphone) {
+            &:nth-child(even) {
+               h3 {
+                  order: 2;
+                  text-align: right;
+               }
+            }
          }
       }
       h3 {

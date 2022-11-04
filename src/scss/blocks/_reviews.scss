@@ -5,6 +5,11 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+   @media (max-width: $ipad) {
+      .reviews-slider-button-next, .reviews-slider-button-prev {
+         display: none !important;
+      }
+   }
    &__item {
       color: white;
       .client {

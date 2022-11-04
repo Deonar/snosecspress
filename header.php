@@ -29,7 +29,7 @@
 			<?php get_template_part('template-parts/nav'); ?>
 		</div>
 	</div>
-	<div class="menu">
+	<div class="header__menu menu">
 		<div class="container">
 			<ul>
 				<li><a href="#" class="a-hover">Про компанію</a></li>

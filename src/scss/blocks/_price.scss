@@ -2,9 +2,12 @@
    .tab-btn-wrapper {
       display: flex;
       justify-content: space-around;
-      overflow-x: scroll;
-      white-space: nowrap;
       column-gap: 20px;
+      @media (max-width: $ipad) {
+         overflow-x: scroll;
+         white-space: nowrap;
+         justify-content: start;
+      }
    }
    .tab-item-wrapper {
       margin-top: 50px;
@@ -13,6 +16,7 @@
       font-weight: 600;
       font-size: 32px;
       color: $black;
+      cursor: pointer;
       &.active {
          color: $red;
          text-decoration: underline;
@@ -29,12 +33,15 @@
       tr {
          width: 100%;
          font-size: 32px;
-         @media (max-width: 415px) {
+         @media (max-width: $ipad) {
+            font-size: 25px;
+         }
+         @media (max-width: $iphone) {
             font-size: 20px;
          }
          td {
             padding: 35px 60px;
-            @media (max-width: 415px) {
+            @media (max-width: $iphone) {
                padding: 15px 30px;
             }
             &:first-child {

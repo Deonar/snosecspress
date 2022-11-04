@@ -8,7 +8,7 @@
          gap: 20px;
          grid-template-columns: 1fr 1fr;
       }
-      @media (max-width: 1020px) {
+      @media (max-width: $ipad) {
          grid-template-columns: 1fr;
       }
    }
@@ -20,11 +20,13 @@
       position: relative;
 
       display: flex;
-      justify-content: end;
+      justify-content: space-between;
       color: white;
       padding: 20px;
-      min-height: 250px;
-      @media (max-width: 415px) {
+      @media (max-width: $ipad) {
+         padding: 40px;
+      }
+      @media (max-width: $iphone) {
          flex-direction: column;
          justify-content: start;
          align-items: center;
@@ -37,7 +39,7 @@
          left: 20px;
          opacity: 60%;
          font-weight: 800;
-         @media (max-width: 415px) {
+         @media (max-width: $iphone) {
             font-size: 40px;
             top: 10px;
          }
@@ -60,16 +62,17 @@
          @media (max-width: 1020px) {
             width: 50%;
          }
-         @media (max-width: 415px) {
+         @media (max-width: $iphone) {
             width: 100%;
+            margin-top: 20px;
+            text-align: center;
          }
       }
       .img {
-         position: absolute;
-         bottom: 5px;
-         left: 0;
-         @media (max-width: 415px) {
-            position: relative;
+         display: flex;
+         align-items: end;
+         img {
+            width: 100%;
          }
       }
    }

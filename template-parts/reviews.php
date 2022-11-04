@@ -1,4 +1,4 @@
-<div class="reviews" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/img/reviews/bg.png')">
+<div class="reviews" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/img/reviews/bg.jpg')">
    <div class="container">
       <div class="block-title"><h3>відгуки</h3></div>
       <div class="reviews__slider swiper">

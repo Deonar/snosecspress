@@ -7,9 +7,6 @@
          <div class="portfolio__slider-wrapper swiper-wrapper">
             <?php for ($i = 1; $i <= 5; $i++) {  ?>
                <div class="portfolio__item swiper-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/img/portfolio/item.png" alt="">
-               </div>
-               <div class="portfolio__item swiper-slide">
                   <img src="<?php echo get_template_directory_uri(); ?>/dist/img/portfolio/item-2.jpg" alt="">
                </div>
             <?php } ?>

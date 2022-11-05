@@ -127,3 +127,13 @@ function start_wp_scripts()
 	wp_enqueue_script('main', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), time(), true);
 }
 add_action('wp_enqueue_scripts', 'start_wp_scripts');
+
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page(array(
+		'page_title'    => 'Основные настройки сайта',
+		'menu_title'    => 'Основные настройки сайта',
+		'menu_slug'     => 'theme-general-settings',
+		'capability'    => 'edit_posts',
+		'redirect'      => false
+	));
+}

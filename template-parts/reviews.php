@@ -1,22 +1,23 @@
 <div class="reviews" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/img/reviews/bg.jpg')">
    <div class="container">
-      <div class="block-title"><h3>відгуки</h3></div>
+      <div class="block-title"><h3><?php the_field('reviews-title') ?></h3></div>
       <div class="reviews__slider swiper">
          <div class="reviews__slider-wrapper swiper-wrapper">
-            <?php for ($i = 1; $i <= 10; $i++) {  ?>
+            <?php while (have_rows('reviews')) : the_row();
+               $image = get_sub_field('avatar');
+            ?>
                <div class="reviews__item swiper-slide">
                   <div class="client">
-                     <div class="avatar"></div>
+                     <div class="avatar"><img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt=""></div>
                      <div>
-                        <p>Ім’я</p>
-                        <p>Прізвище</p>
+                        <?php the_sub_field('name') ?>
                      </div>
                   </div>
                   <div class="content">
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                     <p><?php the_sub_field('content') ?></p>
                   </div>
                </div>
-            <?php } ?>
+            <?php endwhile; ?>
          </div>
       </div>
       <div class="swiper-button-next reviews-slider-button-next">

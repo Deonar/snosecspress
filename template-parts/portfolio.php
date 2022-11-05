@@ -1,15 +1,17 @@
 <div class="portfolio">
    <div class="container">
       <div class="block-title">
-         <h3>Наші виконані замовлення</h3>
+         <h3><?php the_field('portfolio-title') ?></h3>
       </div>
       <div class="portfolio__slider swiper">
          <div class="portfolio__slider-wrapper swiper-wrapper">
-            <?php for ($i = 1; $i <= 5; $i++) {  ?>
+            <?php while (have_rows('portfolio')) : the_row();
+               $image = get_sub_field('img');
+            ?>
                <div class="portfolio__item swiper-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/img/portfolio/item-2.jpg" alt="">
+                  <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="">
                </div>
-            <?php } ?>
+            <?php endwhile; ?>
          </div>
       </div>
       <div class="swiper-button-next portfolio-slider-button-next">

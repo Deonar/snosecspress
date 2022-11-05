@@ -11,6 +11,7 @@
       min-height: 100%;
       display: flex;
       justify-content: space-between;
+      overflow: hidden;
       @media (max-width: $iphone) {
          flex-direction: column;
       }
@@ -28,6 +29,7 @@
                   }
                }
                .bg-img {
+                  left: 0;
                   img {
                      transform: scale(-1, 1);
                   }
@@ -55,6 +57,10 @@
       .bg-img {
          display: flex;
          align-items: end;
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 40%;
          img {
             width: 100%;
          }

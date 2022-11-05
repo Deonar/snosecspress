@@ -1,18 +1,17 @@
 <div class="faq">
    <div class="container">
-      <div class="block-title"><h3>Часті запитання</h3></div>
+      <div class="block-title"><h3><?php the_field('faq-title') ?></h3></div>
       <div class="faq__wrapper">
-         <?php for ($i = 1; $i <= 5; $i++) {  ?>
+         <?php while (have_rows('faq')) : the_row(); ?>
          <div class="faq__item accordion-tab-js">
             <h3 class="accordion-preview">
-               Чи буде багато шуму та пилу?
+               <?php the_sub_field('title') ?>
             </h3>
             <div class="accordion-content accordion-content-js">
-               Однозначної відповіді це питання немає! Все залежить від індивідуального замовлення. Дізнатись ціну роботи ви можете звернувшись до нас через форму.
-               Частково ціни вказані в прайс-листі, з яким можете ознайомитися  в меню.
+               <?php the_sub_field('content') ?>
             </div>
          </div>
-         <?php } ?>
+         <?php endwhile; ?>
       </div>
    </div>
 </div>

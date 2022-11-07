@@ -49,6 +49,9 @@
          font-size: 36px;
          color: white;
          margin-bottom: 50px;
+         @media (max-width: 321px) {
+            font-size: 25px;
+         }
       }
       .btn {
          padding: 16px 90px;

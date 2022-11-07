@@ -1,8 +1,14 @@
 jQuery(document).ready(function ($) {
+
   $("#header-burger").on("click", function (e) {
     $(this).toggleClass("active");
     $(".header__menu ").toggleClass("active");
     $("body").toggleClass("overflow-h");
+    $(".menu-item").on("click", function () {
+      $("body").toggleClass("overflow-h");
+      $(".header__menu ").toggleClass("active");
+      $("#header-burger").toggleClass("active");
+    });
   });
 
   // portfolio slider

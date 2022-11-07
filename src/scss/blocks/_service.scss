@@ -48,6 +48,9 @@
          @media (max-width: $iphone) {
             width: 100%;
          }
+         @media (max-width: 321px) {
+            padding: 30px;
+         }
       }
       .btn-wrapper {
          position: relative;

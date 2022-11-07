@@ -228,6 +228,9 @@ a {
     display: inline-block;
     font-weight: 600;
     font-size: 40px;
+    @media (max-width: 321px) {
+      font-size: 35px;
+    }
     &::before,
     &::after {
       content: "";
@@ -246,8 +249,8 @@ a {
     }
   }
   @media (max-width: $iphone) {
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 }
 // slider

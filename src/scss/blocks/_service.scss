@@ -36,6 +36,9 @@
                }
             }
          }
+         @media (max-width: $iphone) {
+            min-height: 0;
+         }
       }
       .content {
          position: relative;
@@ -47,6 +50,7 @@
          padding: 40px;
          @media (max-width: $iphone) {
             width: 100%;
+            background: rgba(0, 0, 0, 0.4);
          }
          @media (max-width: 321px) {
             padding: 30px;
@@ -56,6 +60,12 @@
          position: relative;
          z-index: 2;
          margin-top: 20px;
+         @media (max-width: $iphone) {
+            .btn {
+               width: 100%;
+               text-align: center;
+            }
+         }
       }
       .bg-img {
          display: flex;
@@ -64,8 +74,8 @@
          bottom: 0;
          right: 0;
          max-width: 230px;
-         img {
-            
+         @media (max-width: $iphone) {
+            max-width: 400px;
          }
       }
       h2, h3, h4, h5 {

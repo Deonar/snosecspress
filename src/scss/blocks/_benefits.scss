@@ -32,6 +32,9 @@
       max-width: 150px;
       img{
          width: 100%;
+         @media (max-width: $iphone) {
+            width: auto;
+         }
       }
    }
 }

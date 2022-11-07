@@ -1,5 +1,8 @@
 .faq {
    padding-bottom: 120px;
+   @media (max-width: $iphone) {
+      padding-bottom: 60px;
+   }
    &__item {
       color: white;
       background: $black;
@@ -7,6 +10,12 @@
       border-radius: 20px;
       margin: 15px 0;
       position: relative;
+      @media (max-width: $iphone) {
+         padding: 30px 40px;
+      }
+      @media (max-width: 321px) {
+         padding: 20px;
+      }
       &.active {
          background: #363D4C;
          .accordion-preview {

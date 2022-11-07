@@ -1,11 +1,20 @@
 <div class="nav">
-   <a href="#" class="nav__logo">SnosEcspress</a>
 
-   <div class="header-burger" id="header-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-   </div>
+   <?php if ($args['header']) : ?>
+      <a href="/" class="nav__logo">
+         <img src="<?php the_field('logo_header', 'option'); ?>" alt="SNOSECSPRESS" />
+      </a>
+      <div class="header-burger" id="header-burger">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   <?php else : ?>
+      <a href="/" class="nav__logo">
+         <img src="<?php the_field('logo_footer', 'option'); ?>" alt="SNOSECSPRESS" />
+      </a>
+   <?php endif ?>
+
 
    <?php if (get_field('location', 'option') || get_field('work-time', 'option')) : ?>
       <a class="location item" href="#">
@@ -70,4 +79,5 @@
    <div class="nav__btn">
       <a href="#" class="btn">Замовити Дзвінок</a>
    </div>
+
 </div>

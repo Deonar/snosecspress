@@ -28,7 +28,7 @@
 	<header class="header" id="header">
 		<div class="container">
 			<div class="header__wrapper">
-				<?php get_template_part('template-parts/nav'); ?>
+				<?php get_template_part('template-parts/nav', '', array( 'header' => true ) ); ?>
 			</div>
 		</div>
 		<div class="header__menu menu">

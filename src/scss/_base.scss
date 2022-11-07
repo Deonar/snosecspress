@@ -6,9 +6,7 @@
 }
 
 html {
-	
-		scroll-behavior: auto !important;
-	
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -21,26 +19,26 @@ body {
   color: $black;
 }
 
-
-.font-romain{
-  font-family: 'RomainText';
+.font-romain {
+  font-family: "RomainText";
 }
-.color-red{
+.color-red {
   color: $red;
 }
-.color-black{
+.color-black {
   color: $black;
 }
 .color-white {
   color: $white;
 }
 
-button{
+button {
   background-color: transparent;
   border: none;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: $base-font;
   outline: none;
   font-size: 20px;
@@ -48,7 +46,7 @@ input, textarea {
   cursor: pointer;
 }
 
-a{
+a {
   text-decoration: none;
   &:hover {
     color: inherit;
@@ -86,57 +84,60 @@ a{
     width: 2px;
   }
 }
-// nav 
+// nav
 .nav {
   padding: 24px 0;
   a {
-     color: $black;
+    color: $black;
   }
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   &__logo {
-     color: $red !important;
-     text-transform: uppercase;
-     font-size: 31px;
-     font-weight: 600;
+    max-width: 250px;
+    @media (max-width: $iphone) {
+      max-width: 200px;
+    }
+    img {
+      width: 100%;
+    }
   }
   .location,
   .email {
-     display: flex;
-     align-items: center;
-     column-gap: 20px;
-     text-align: left;
-     p {
-        font-size: 16px;
-        font-weight: 600;
-        margin: 0;
-     }
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    text-align: left;
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
   }
   &__soc {
-     align-items: center;
-     display: flex;
-     column-gap: 20px;
-     .item {
-        display: inline-flex;
-        width: 39px;
-        height: 39px;
-        border: 1px solid $red;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-     }
+    align-items: center;
+    display: flex;
+    column-gap: 20px;
+    .item {
+      display: inline-flex;
+      width: 39px;
+      height: 39px;
+      border: 1px solid $red;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__call {
-     display: flex;
-     align-items: center;
-     column-gap: 20px;
-     a {
-        display: block;
-        font-size: 16px;
-        font-weight: 600;
-     }
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -157,37 +158,46 @@ a{
   font-size: 18px;
   transition: 0.2s;
 
-  position:relative;
-  overflow:hidden;
-  vertical-align:top;
-  z-index:2;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  z-index: 2;
   display: inline-block;
-  
+
   &:before {
-    content:'';
-    -webkit-transition:3s ease-in-out;
-    transition:3s ease-in-out;
-    background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0.1)),to(rgba(255,255,255,0.5)));
-    background:linear-gradient(90deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5));
-    height:100%;
-    width:20%;
-    position:absolute;
-    top:0;
-    -webkit-transform:skewX(-45deg);
-    transform:skewX(-45deg);
-    left:-90px
+    content: "";
+    -webkit-transition: 3s ease-in-out;
+    transition: 3s ease-in-out;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(255, 255, 255, 0.1)),
+      to(rgba(255, 255, 255, 0.5))
+    );
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg);
+    left: -90px;
   }
   &:hover {
     &:before {
       animation: hoverFlare 1.5s infinite;
     }
   }
+  @media (max-width: $iphone) {
+    padding: 16px 10px;
+  }
 }
 
 .a-hover {
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -218,8 +228,9 @@ a{
     display: inline-block;
     font-weight: 600;
     font-size: 40px;
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       position: absolute;
       display: block;
       width: 120px;
@@ -234,50 +245,53 @@ a{
       right: -140px;
     }
   }
+  @media (max-width: $iphone) {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
 }
-// slider 
+// slider
 
-.swiper-button-next, 
+.swiper-button-next,
 .swiper-button-prev {
-   top: 70%;
-   width: 40px;
-   height: 40px;
-   background: $red;
-   border-radius: 50%;
-   &::after {
-      display: none;
-   }
+  top: 70%;
+  width: 40px;
+  height: 40px;
+  background: $red;
+  border-radius: 50%;
+  &::after {
+    display: none;
+  }
 }
 .swiper-button-prev {
-   left: 20px;
-   svg {
+  left: 20px;
+  svg {
     margin-right: 4px;
   }
 }
 .swiper-button-next {
-   right: 20px;
-   svg {
+  right: 20px;
+  svg {
     margin-left: 4px;
   }
 }
 .swiper-pagination {
-   bottom: -35px !important;
+  bottom: -35px !important;
 }
 .swiper-pagination-bullet {
-   background: none;
-   border: 1px solid #D9D9D9;
-   width: 10px;
-   height: 10px;
-   opacity: 1;
-   transition: 0.1s;
+  background: none;
+  border: 1px solid #d9d9d9;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  transition: 0.1s;
 }
 .swiper-pagination-bullet-active {
-   background: $red !important;
-   border: none;
+  background: $red !important;
+  border: none;
 }
 
-
-.italic{
+.italic {
   font-style: italic;
 }
 .text-center {
@@ -302,7 +316,7 @@ a{
   }
 }
 
-.mw-100{
+.mw-100 {
   min-width: 100%;
 }
 
@@ -313,16 +327,16 @@ a{
   height: 100%;
 }
 
-.py-30{
+.py-30 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.mb-8{
+.mb-8 {
   margin-bottom: 8px;
 }
 
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
 
@@ -351,54 +365,53 @@ a{
 .ml-10 {
   margin-left: 10px;
 }
-.ml-12{
+.ml-12 {
   margin-left: 12px;
 }
 
 .mt-8 {
-  margin-top: 8px!important;
+  margin-top: 8px !important;
 }
 
 .mt-16 {
-  margin-top: 16px!important;
+  margin-top: 16px !important;
 }
 .mt-32 {
-  margin-top: 32px!important;
+  margin-top: 32px !important;
 }
 .mt-50 {
-  margin-top: 50px!important;
+  margin-top: 50px !important;
 }
-.mb-5{
-  margin-bottom: 5px!important;
+.mb-5 {
+  margin-bottom: 5px !important;
 }
-.mb-16{
+.mb-16 {
   margin-bottom: 18px;
 }
-.mb-24{
+.mb-24 {
   margin-bottom: 24px;
 }
-.mb-30{
+.mb-30 {
   margin-bottom: 30px;
 }
-.mb-32{
+.mb-32 {
   margin-bottom: 32px;
 }
-.mb-35{
+.mb-35 {
   margin-bottom: 35px;
 }
-.mb-40{
+.mb-40 {
   margin-bottom: 40px;
 }
 
-.mb-60{
+.mb-60 {
   margin-bottom: 40px;
 }
 
-.my-90{
+.my-90 {
   margin-top: 90px;
   margin-bottom: 90px;
 }
-
 
 .svg-loader--wrapper {
   position: fixed;
@@ -410,8 +423,8 @@ a{
   display: none;
 }
 
-.svg-loader{
-  display:flex;
+.svg-loader {
+  display: flex;
   position: relative;
   align-content: space-around;
   justify-content: center;
@@ -421,56 +434,58 @@ a{
   top: 0;
   bottom: 0;
   align-items: center;
-  
-  background: rgba(255,255,255,0.8);
+
+  background: rgba(255, 255, 255, 0.8);
 }
-.loader-svg{
+.loader-svg {
   position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   fill: none;
   stroke-width: 5px;
   stroke-linecap: round;
   stroke: $primary;
 }
-.loader-svg.loader-bg{
+.loader-svg.loader-bg {
   stroke-width: 8px;
-  stroke: rgba(197,197,197,0.4);
+  stroke: rgba(197, 197, 197, 0.4);
 }
 
-.loader-animate{
+.loader-animate {
   stroke-dasharray: 242.6;
-  animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+  animation: fill-animation 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
 }
 
-@keyframes fill-animation{
-  0%{
+@keyframes fill-animation {
+  0% {
     stroke-dasharray: 40 242.6;
     stroke-dashoffset: 0;
   }
-  50%{
+  50% {
     stroke-dasharray: 141.3;
     stroke-dashoffset: 141.3;
   }
-  100%{
+  100% {
     stroke-dasharray: 40 242.6;
     stroke-dashoffset: 282.6;
   }
 }
-.material-icons-round, .material-icons-outlined{
+.material-icons-round,
+.material-icons-outlined {
   vertical-align: middle;
 }
 
-.deg-113{
+.deg-113 {
   transform: rotate(113deg);
 }
-.deg-90{
+.deg-90 {
   transform: rotate(90deg);
 }
-.deg-180{
+.deg-180 {
   transform: rotate(180deg);
 }
-.deg-360{
+.deg-360 {
   transform: rotate(360deg);
 }
-
-

@@ -105,31 +105,32 @@ p,
     h1,
     .h1 {
         font-size: 64px;
-        line-height: calc-lh(64, 80);
-        font-style: normal;
-        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
     h2,
     .h2 {
-        font-size: 56px;
-        line-height: calc-lh(56, 72);
-        font-style: normal;
-        font-weight: 400;
+        font-size: 48px;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
     h3,
     .h3 {
-        font-size: 48px;
-        line-height: calc-lh(48, 64);
+        font-size: 40px;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
     h4,
     .h4 {
-        font-size: 40px;
-        line-height: calc-lh(40, 56);
+        font-size: 32px;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
     h5,
     .h5 {
-        font-size: 32px;
-        line-height: calc-lh(32, 48);
+        font-size: 28px;
+        line-height: 1.4;
+        margin-bottom: 20px;
     }
 }
 
@@ -138,15 +139,11 @@ p,
     .h1 {
         font-size: 44px;
         line-height: calc-lh(44, 60);
-        font-style: normal;
-        font-weight: 400;
     }
     h2,
     .h2 {
         font-size: 40px;
         line-height: calc-lh(40, 51);
-        font-style: normal;
-        font-weight: 400;
     }
     h3,
     .h3 {
@@ -165,11 +162,5 @@ p,
     }
     p,
     .content_normal {
-        font-family: $title-font;
-        font-size: 18px;
-        line-height: calc-lh(18, 30);
-        font-style: normal;
-        font-weight: 300;
-        letter-spacing: 0em;
     }
 }

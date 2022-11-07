@@ -1,44 +1,82 @@
-<div class="price">
-   <div class="container">
-      <div class="block-title"><h3>ціни</h3></div>
-      <div class="price__tab">
-         <div class="tab-btn-wrapper">
-            <a class="price__tab-btn tab-btn" data-tab="#tab-1">Алмазне нарізання бетону</a>
-            <a class="price__tab-btn tab-btn" data-tab="#tab-2">Демонтаж</a>
-            <a class="price__tab-btn tab-btn" data-tab="#tab-3">Послуги вантажників</a>
-            <a class="price__tab-btn tab-btn active" data-tab="#tab-4">Вивіз сміття</a>
+<?php if (have_rows('prices')) : ?>
+   <div class="price" id="price">
+      <div class="container">
+         <div class="block-title wow fadeInUp" data-wow-delay="0.3s">
+            <h3>ціни</h3>
          </div>
-         <div class="tab-item-wrapper">
-            <div class="price__tab-item tab-item" id="tab-1">
-               tab 1 
+
+         <div class="price__tab">
+            <div class="tab-btn-wrapper">
+               <?php while (have_rows('prices')) : the_row(); ?>
+                  <a class="price__tab-btn tab-btn <?php echo (get_row_index() == 1 ? 'active' : ''); ?>" data-tab="#tab-<?php echo get_row_index(); ?>">
+                     <?php the_sub_field('title'); ?>
+                  </a>
+               <?php endwhile; ?>
             </div>
-            <div class="price__tab-item tab-item" id="tab-2">
+            <div class="tab-item-wrapper">
+
+               <?php while (have_rows('prices')) : the_row(); ?>
+                  <div class="price__tab-item tab-item <?php echo (get_row_index() == 1 ? 'active' : ''); ?>" id="tab-<?php echo get_row_index(); ?>">
+                     <?php the_sub_field('content'); ?>
+
+                     <?php
+                     $table = get_sub_field('table');
+
+                     if (!empty($table)) {
+
+                        echo '<table border="0">';
+
+                        if (!empty($table['caption'])) {
+
+                           echo '<caption>' . $table['caption'] . '</caption>';
+                        }
+
+                        if (!empty($table['header'])) {
+
+                           echo '<thead>';
+
+                           echo '<tr>';
+
+                           foreach ($table['header'] as $th) {
+
+                              echo '<th>';
+                              echo $th['c'];
+                              echo '</th>';
+                           }
+
+                           echo '</tr>';
+
+                           echo '</thead>';
+                        }
+
+                        echo '<tbody>';
+
+                        foreach ($table['body'] as $tr) {
+
+                           echo '<tr>';
+
+                           foreach ($tr as $td) {
+
+                              echo '<td>';
+                              echo $td['c'];
+                              echo '</td>';
+                           }
+
+                           echo '</tr>';
+                        }
+
+                        echo '</tbody>';
+
+                        echo '</table>';
+                     }
+                     ?>
+                  </div>
+               <?php endwhile; ?>
+
             </div>
-            <div class="price__tab-item tab-item" id="tab-3">
-            <table class="price__table">
-                  <tbody>
-                  <?php for ($i = 1; $i <= 10; $i++) {  ?>
-                     <tr>
-                        <td>Газель</td>
-                        <td>900 грн (до 50 мішків)</td>
-                     </tr>
-                  <?php } ?>
-                  </tbody>
-               </table>
-            </div>
-            <div class="price__tab-item tab-item active" id="tab-4">
-               <table class="price__table">
-                  <tbody>
-                  <?php for ($i = 1; $i <= 10; $i++) {  ?>
-                     <tr>
-                        <td>КаМаз</td>
-                        <td>2200 грн</td>
-                     </tr>
-                  <?php } ?>
-                  </tbody>
-               </table>
-            </div>
+
          </div>
+
       </div>
    </div>
-</div>
+<?php endif; ?>

@@ -5,7 +5,7 @@ h1,
     font-size: 80px;
     line-height: calc-lh(80, 96);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
@@ -15,7 +15,7 @@ h2,
     font-size: 56px;
     line-height: calc-lh(56, 72);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
@@ -25,7 +25,7 @@ h3,
     font-size: 48px;
     line-height: calc-lh(48, 64);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
@@ -35,7 +35,7 @@ h4,
     font-size: 40px;
     line-height: calc-lh(40, 56);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
@@ -45,15 +45,7 @@ h5,
     font-size: 32px;
     line-height: calc-lh(32, 48);
     font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0em;
-}
-.h5_alternative {
-    font-family: $title-font;
-    font-size: 32px;
-    line-height: calc-lh(32, 48);
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
@@ -63,28 +55,28 @@ h6,
     font-size: 24px;
     line-height: calc-lh(24, 32);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0em;
 }
 
 p,
 .content_normal {
-    font-family: $title-font;
-    font-size: 20px;
+    font-family: $base-font;
+    font-size: 16px;
     line-height: calc-lh(20, 32);
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
 }
 .content_large {
-    font-family: $title-font;
+    font-family: $base-font;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: calc-lh(24, 40);
 }
 .content_small {
-    font-family: $title-font;
+    font-family: $base-font;
     font-size: 14px;
     line-height: calc-lh(14, 18);
     font-style: normal;
@@ -93,7 +85,7 @@ p,
 }
 
 .caption_normal {
-    font-family: $title-font;
+    font-family: $base-font;
     font-size: 16px;
     line-height: calc-lh(16, 24);
     font-style: normal;
@@ -101,7 +93,7 @@ p,
 }
 
 .caption_small {
-    font-family: $title-font;
+    font-family: $base-font;
     font-size: 14px;
     line-height: calc-lh(14, 18);
     font-style: normal;

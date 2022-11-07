@@ -15,6 +15,22 @@
         margin-bottom: 24px;
     }
 
+    &__btn {
+        width: 100%;
+        max-width: 100%;
+    }
+    input {
+        font-size: 14px;
+        padding: 15px;
+        width: 100%;
+        border: 1px solid #4f4f4f;
+        border-radius: 5px;
+        background: #fff;
+    }
+    .wpcf7-response-output {
+        color: #fff;
+    }
+
     @include media-breakpoint-down(md) {
         &-col-50p {
             width: 100%;
@@ -22,4 +38,35 @@
     }
 }
 
+.consult-form {
+    margin-left: auto;
+    max-width: 420px;
+    background: #fff;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    @media (max-width: 990px) {
+        margin-top: 30px;
+        padding: 25px;
+    }
+}
 
+.order-form {
+    margin-left: auto;
+    max-width: 420px;
+    padding: 40px;
+    .form__title {
+        text-align: center;
+    }
+    input {
+        background: rgba(240, 240, 240, 0.8);
+    }
+    .wpcf7-response-output {
+        color: #000;
+    }
+}
+
+.thanks-block {
+    max-width: 420px;
+    padding: 20px;
+}

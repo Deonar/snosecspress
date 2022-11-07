@@ -14,7 +14,7 @@
 <footer class="footer">
    <div class="container">
       <?php get_template_part('template-parts/nav'); ?>
-      <span>© 2017  All rights reserved.</span>
+      <span>© <?php echo date("Y"); ?>, всі права захищені.</span>
    </div>
 </footer>
 

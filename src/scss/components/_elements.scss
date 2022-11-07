@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    tr {
+       width: 100%;
+       font-size: 24px;
+       @media (max-width: $iphone) {
+          font-size: 20px;
+       }
+       td {
+          padding: 35px 60px;
+          @media (max-width: $iphone) {
+             padding: 15px 30px;
+          }
+       }
+       &:nth-child(odd) {
+          background: #ECECEC;
+       }
+    }
+ }

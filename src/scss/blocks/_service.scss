@@ -60,16 +60,15 @@
          position: absolute;
          bottom: 0;
          right: 0;
-         width: 40%;
+         max-width: 230px;
          img {
-            width: 100%;
+            
          }
       }
-      h3 {
+      h2, h3, h4, h5 {
          color: $red;
-         text-decoration: underline;
          font-size: 32px;
-         font-weight: 600;
+         margin-bottom: 20px;
       }
       ul {
          padding: 0;

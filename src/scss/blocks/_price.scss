@@ -14,7 +14,7 @@
    }
    .price__tab-btn {
       font-weight: 600;
-      font-size: 32px;
+      font-size: 28px;
       color: $black;
       cursor: pointer;
       &.active {
@@ -28,29 +28,5 @@
          display: block;
       }
    }
-   &__table {
-      width: 100%;
-      tr {
-         width: 100%;
-         font-size: 32px;
-         @media (max-width: $ipad) {
-            font-size: 25px;
-         }
-         @media (max-width: $iphone) {
-            font-size: 20px;
-         }
-         td {
-            padding: 35px 60px;
-            @media (max-width: $iphone) {
-               padding: 15px 30px;
-            }
-            &:first-child {
-               width: 40%;
-            }
-         }
-         &:nth-child(odd) {
-            background: #ECECEC;
-         }
-      }
-   }
+  
 }

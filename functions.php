@@ -45,7 +45,7 @@ if (!function_exists('start_wp_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Primary', 'start-wp'),
+				'header_menu' => esc_html__('Головне меню', 'start-wp'),
 			)
 		);
 
@@ -115,10 +115,21 @@ function start_wp_scripts()
 {
 	// load fonts 
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;700&display=swap', array());
+	
+	// jquery mask
+	wp_enqueue_script('jquery.mask', get_template_directory_uri() . '/src/libs/jquery-mask/jquery.mask.min.js', array('jquery'), _S_VERSION, true);
 
 	// Swiper
 	wp_enqueue_style('swiper-style', get_template_directory_uri() . '/src/libs/swiper/swiper.min.css', array(), _S_VERSION);
 	wp_enqueue_script('swiper-js', get_template_directory_uri() . '/src/libs/swiper/swiper.min.js', array(), array());
+
+	//magnific-popup
+	wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/src/libs/magnific-popup/magnific-popup.css', array(), _S_VERSION);
+	wp_enqueue_script('magnific-popup', get_template_directory_uri() . '/src/libs/magnific-popup/jquery.magnific-popup.min.js', array('jquery'), _S_VERSION, true);
+
+	// Wow 
+	wp_enqueue_style('animate', get_template_directory_uri() . '/src/libs/animate/animate.min.css', array(), _S_VERSION);
+	wp_enqueue_script('wow', get_template_directory_uri() . '/src/libs/wow/wow.min.js', array('jquery'), _S_VERSION, true);
 
 	wp_enqueue_style('main', get_template_directory_uri() . '/dist/css/main.min.css', array(), time());
 	wp_enqueue_style('start-wp-style', get_stylesheet_uri(), array(), _S_VERSION);

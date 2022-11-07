@@ -3,6 +3,7 @@
       background: #757A7E;
       display: flex;
       padding: 0 20px;
+      height: 100%;
       overflow: hidden;
       align-items: center;
       justify-content: space-between;
@@ -24,6 +25,13 @@
          font-weight: 400;
          color: white;
          // min-width: 200px;
+      }
+   }
+   &__img{
+      align-self: flex-end;
+      max-width: 150px;
+      img{
+         width: 100%;
       }
    }
 }

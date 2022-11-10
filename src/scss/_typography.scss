@@ -12,7 +12,7 @@ h1,
 h2,
 .h2 {
     font-family: $title-font;
-    font-size: 56px;
+    font-size: 48px;
     line-height: calc-lh(56, 72);
     font-style: normal;
     font-weight: 700;
@@ -22,8 +22,8 @@ h2,
 h3,
 .h3 {
     font-family: $title-font;
-    font-size: 48px;
-    line-height: calc-lh(48, 64);
+    font-size: 40px;
+    line-height: calc-lh(40, 64);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
@@ -32,8 +32,8 @@ h3,
 h4,
 .h4 {
     font-family: $title-font;
-    font-size: 40px;
-    line-height: calc-lh(40, 56);
+    font-size: 32px;
+    line-height: calc-lh(32, 56);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
@@ -42,8 +42,8 @@ h4,
 h5,
 .h5 {
     font-family: $title-font;
-    font-size: 32px;
-    line-height: calc-lh(32, 48);
+    font-size: 24px;
+    line-height: calc-lh(24, 48);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
@@ -52,8 +52,8 @@ h5,
 h6,
 .h6 {
     font-family: $title-font;
-    font-size: 24px;
-    line-height: calc-lh(24, 32);
+    font-size: 18px;
+    line-height: calc-lh(18, 32);
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
@@ -101,36 +101,41 @@ p,
     letter-spacing: 0em;
 }
 
+h1,h2,h3,h4,h5{
+    margin-bottom: 30px;
+}
+p{
+    margin-bottom: 40px;
+}
+
 @include media-breakpoint-down(xl) {
+    h1,h2,h3,h4,h5{
+        margin-bottom: 20px;
+    }
     h1,
     .h1 {
         font-size: 64px;
         line-height: 1.4;
-        margin-bottom: 20px;
     }
     h2,
     .h2 {
         font-size: 48px;
         line-height: 1.4;
-        margin-bottom: 20px;
     }
     h3,
     .h3 {
         font-size: 40px;
         line-height: 1.4;
-        margin-bottom: 20px;
     }
     h4,
     .h4 {
         font-size: 32px;
         line-height: 1.4;
-        margin-bottom: 20px;
     }
     h5,
     .h5 {
         font-size: 28px;
         line-height: 1.4;
-        margin-bottom: 20px;
     }
 }
 
@@ -138,29 +143,27 @@ p,
     h1,
     .h1 {
         font-size: 44px;
-        line-height: calc-lh(44, 60);
+        line-height: 60px;
     }
     h2,
     .h2 {
         font-size: 40px;
-        line-height: calc-lh(40, 51);
+        line-height: 51px;
     }
     h3,
     .h3 {
         font-size: 32px;
-        line-height: calc-lh(32, 40);
+        line-height: 40px;
     }
     h4,
     .h4 {
         font-size: 24px;
-        line-height: calc-lh(24, 32);
+        line-height: 32px;
     }
     h5,
     .h5 {
         font-size: 20px;
-        line-height: calc-lh(20, 32);
-    }
-    p,
-    .content_normal {
+        line-height: 32px
     }
 }
+

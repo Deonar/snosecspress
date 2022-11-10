@@ -2,8 +2,8 @@
    <div class="container">
       <div class="call-block__wrapper">
          <h3><?php the_field('call-title') ?></h3>
-         <a class="btn" href="#">Замовити дзвінок</a>
+         <button type="button" class="btn popmake-222">Замовити дзвінок</button>
       </div>
-      <img src="<?php the_field('call-img') ?>" alt="" class="">
+      <img src="<?php the_field('call-img') ?>" alt="Замовити дзвінок">
    </div>
 </div>

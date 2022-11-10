@@ -1,5 +1,4 @@
 jQuery(document).ready(function ($) {
-
   $("#header-burger").on("click", function (e) {
     $(this).toggleClass("active");
     $(".header__menu ").toggleClass("active");
@@ -157,7 +156,7 @@ jQuery(document).ready(function ($) {
 
     $("html, body").animate(
       {
-        scrollTop: $(href)?.offset()?.top - 120,
+        scrollTop: $(href).offset().top - 120,
       },
       {
         duration: 370,
@@ -166,7 +165,7 @@ jQuery(document).ready(function ($) {
     );
     if ($(window).width() < 768) {
       $("html, body").animate({
-        scrollTop: $(href)?.offset()?.top - 70,
+        scrollTop: $(href).offset().top - 70,
       });
     }
     return false;
@@ -183,9 +182,8 @@ jQuery(document).ready(function ($) {
     });
   });
 
-
-   // Phone mask
-   $(".mask-phone").mask("+38 (0ZZ) ZZZZ ZZZ", {
+  // Phone mask
+  $(".mask-phone").mask("+38 (0ZZ) ZZZZ ZZZ", {
     translation: {
       Z: {
         pattern: /[0-9]/,
@@ -199,4 +197,15 @@ jQuery(document).ready(function ($) {
   });
 
   wow.init();
+
+  //Modal
+  let titleOrder = $("h1[data-title-js]").attr("data-title-js");
+  $(".hide-title-order").val(titleOrder);
+
+  $(".order-service").click(function () {
+    $(".hide-title-order").val("");
+    titleOrder = $(this).attr("data-title-js");
+    $(".hide-title-order").val(titleOrder);
+  });
+
 });

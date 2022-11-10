@@ -49,16 +49,14 @@
          font-size: 36px;
          color: white;
          margin-bottom: 50px;
-         @media (max-width: 321px) {
-            font-size: 25px;
-         }
          @media (max-width: $iphone) {
             margin-bottom: 20px;
+            font-size: 25px;
          }
       }
       .btn {
          padding: 16px 90px;
-         @media (max-width: 321px) {
+         @media (max-width: $iphone) {
             padding: 16px 20px;
             width: 100%;
           }

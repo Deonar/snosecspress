@@ -11,7 +11,7 @@
                <div class="benefits__item">
                   <h3><?php the_sub_field('text') ?></h3>
                   <div class="benefits__img">
-                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="">
+                     <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="">
                   </div>
                </div>
             </div>

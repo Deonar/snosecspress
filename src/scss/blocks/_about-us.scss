@@ -21,7 +21,7 @@
       @media (max-width: 1024px) {
          padding: 50px;
       }
-      @media (max-width: 321px) {
+      @media (max-width: $iphone) {
          padding: 30px;
       }
       h2 {
@@ -29,9 +29,6 @@
          font-weight: 600;
          margin-bottom: 30px;
          @media (max-width: $iphone) {
-            font-size: 30px;
-         }
-         @media (max-width: 321px) {
             font-size: 25px;
          }
       }

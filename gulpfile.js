@@ -96,8 +96,6 @@ function css() {
                 outputStyle: 'expanded',
             }),
         )
-        
-        .pipe(group_media())
         .pipe(
             autoprefixer({
                 cascade: true,

@@ -11,6 +11,11 @@
                <div class="service__item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/img/service/item-bg.png)">
                   <div class="content">
                      <div>
+                        <?php if (get_sub_field('title')) : ?>
+                           <h3>
+                              <?php the_sub_field('title') ?>
+                           </h3>
+                        <?php endif; ?>
                         <?php the_sub_field('content') ?>
                         <?php if (!empty(get_sub_field('link'))) :
                            $link =  get_sub_field('link');
@@ -19,7 +24,7 @@
                         <?php endif; ?>
                      </div>
 
-                     <div class="btn-wrapper"><a href="#" class="btn">Замовити послугу</a></div>
+                     <div class="btn-wrapper"><button type="button" class="btn order-service popmake-238" data-title-js="<?php the_sub_field('title') ?>">Замовити послугу</button></div>
                   </div>
                   <div class="bg-img">
                      <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="" class="bg-img">

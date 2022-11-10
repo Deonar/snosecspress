@@ -135,7 +135,7 @@ function start_wp_scripts()
 	wp_enqueue_style('start-wp-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 	// Scripts
-	wp_enqueue_script('main', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), time(), true);
+	wp_enqueue_script('main', get_template_directory_uri() . '/dist/js/main.min.js', array('jquery'), time(), true);
 }
 add_action('wp_enqueue_scripts', 'start_wp_scripts');
 

@@ -19,7 +19,7 @@
    <?php get_template_part('inc/social'); ?>
    <?php get_template_part('inc/phone'); ?>
    <div class="nav__btn">
-      <button type="button" class="btn popmake-222">Замовити Дзвінок</button>
+      <button type="button" data-title-js="Замовити дзвінок" class="btn order-service popmake-222">Замовити Дзвінок</button>
    </div>
 
 </div>

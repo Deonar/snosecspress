@@ -148,3 +148,45 @@ if (function_exists('acf_add_options_page')) {
 		'redirect'      => false
 	));
 }
+
+
+
+add_action( 'wpcf7_before_send_mail',
+  function( $contact_form, &$abort, $submission ) {
+    // Getting user input through the your-email field
+    // $your_email = $submission->get_posted_data( 'your-email' );
+    $data = $submission->get_posted_data();
+
+
+	sendOrder($data);
+
+  },
+  10, 3
+);
+
+
+function sendOrder($data){
+	//В переменную $token нужно вставить токен, который нам прислал @botFather
+	$token = "5707276087:AAEA7EzSTz4OjyVp7yfAu0nkcx8oCC6TCLA";
+
+	//Сюда вставляем chat_id
+	$chat_id = "-818018991";
+
+	$name = $data['client-name'];
+	$phone = $data['client-phone'];
+	$service = $data['order-service'];
+
+	$txt = "<b>Нова заявка</b> %0A";
+	$txt .= "<b>Послуга:</b> " . $service . "%0A";
+	$txt .= "<b>Ім'я:</b> " . $name . "%0A";
+	$txt .= "<b>Телефон:</b> " . $phone . "%0A";
+
+	//Передаем данные боту
+	$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
+	if ($sendToTelegram) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
